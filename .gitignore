@@ -1,0 +1,15 @@
+# build artifacts
+build/
+*.exe
+*.dll
+*.obj
+*.pdb
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+
+# VS
+.vs/
+*.sln
+*.vcxproj*
