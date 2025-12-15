@@ -4,10 +4,13 @@ project(EdgeInfer)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-include_directories(include)
-
-file(GLOB_RECURSE SRC_FILES
-    src/*.cpp
+add_executable(edgeinfer
+    src/main.cpp
+    src/server/http_server.cpp
 )
 
-add_executable(edgeinfer ${SRC_FILES})
+target_include_directories(edgeinfer
+    PRIVATE
+        ${PROJECT_SOURCE_DIR}/include
+        ${PROJECT_SOURCE_DIR}/third_party
+)
