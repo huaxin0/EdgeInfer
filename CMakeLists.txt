@@ -3,7 +3,7 @@ project(EdgeInfer)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -02")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -O2")
 #=================1. json库的载入==================
 include(FetchContent)
 FetchContent_Declare(
@@ -19,6 +19,7 @@ include_directories(
     ${PROJECT_SOURCE_DIR}/include
     ${PROJECT_SOURCE_DIR}/third_party
     ${ASCEND_PATH}/include  # 昇腾头文件
+    ${OpenCV_INCLUDE_DIRS}  # OpenCV头文件
 )
 
 link_directories(
@@ -30,12 +31,15 @@ add_executable(edgeinfer
     src/main.cpp
     src/server/http_server.cpp
     src/infer/infer_manager.cpp
+    src/utils/base64.cpp
+    src/utils/image_processor.cpp
 )
 
 # ========== 4. 链接库 ==========
 target_link_libraries(edgeinfer 
     PRIVATE 
         nlohmann_json::nlohmann_json  # JSON库
+        ${OpenCV_INCLUDE_DIRS}        # OpenCV头文件
         ascendcl                       # 昇腾推理库
         acl_op_compiler                # 昇腾算子库
         pthread                        # 线程库
