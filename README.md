@@ -413,8 +413,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📬 Contact
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+- GitHub: [@huaxin0](https://github.com/huaxin0)
+- Email:19946720495@163.com
 
 ---
 
@@ -433,6 +433,7 @@ If you use EdgeInfer in your research, please cite:
 ---
 
 **⭐ Star this repo if you find it helpful!**
+
 
 
 
