@@ -422,10 +422,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you use EdgeInfer in your research, please cite:
 ```bibtex
-@software{edgeinfer2024,
+@software{edgeinfer2025,
   author = {huaxin0},
   title = {EdgeInfer: Edge AI Inference Engine Based on Ascend NPU},
-  year = {2024},
+  year = {2025},
   url = {https://github.com/huaxin0/EdgeInfer}
 }
 ```
@@ -434,3 +434,4 @@ If you use EdgeInfer in your research, please cite:
 
 **⭐ Star this repo if you find it helpful!**
 EOF
+
